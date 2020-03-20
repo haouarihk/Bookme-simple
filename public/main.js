@@ -1,10 +1,28 @@
-function search(){
+let socket;
+socket = io();
+
+function search() {
+    
+    let data = getElementById("searchbar").value;
+    socket.emit("getme",data);
+    socket.on("search", () => {
+        
+    });
+}
+// Events
+function Onresigter() {
 
 }
 
-function login(){
+function Onlogin() {
 
 }
-function register(userdata){
+
+// Functions
+function login() {
+
+}
+
+function register(userdata) {
 
 }
