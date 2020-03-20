@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/wolfpat01/Bookme-simple/issues"
   },
-  "homepage": "https://github.com/wolfpat01/Bookme-simple#readme"
+  "homepage": "https://github.com/wolfpat01/Bookme-simple#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
