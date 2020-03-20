@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/wolfpat01/Bookme-simple#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sockets": "^0.4.2"
   }
 }
