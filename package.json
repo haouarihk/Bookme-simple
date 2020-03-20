@@ -1,0 +1,24 @@
+{
+  "name": "bookstore-simple",
+  "version": "1.0.0",
+  "description": "simple book store",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolfpat01/Bookme-simple.git"
+  },
+  "keywords": [
+    "bookme",
+    "book",
+    "safe"
+  ],
+  "author": "wolfpat01",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolfpat01/Bookme-simple/issues"
+  },
+  "homepage": "https://github.com/wolfpat01/Bookme-simple#readme"
+}
