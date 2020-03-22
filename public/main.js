@@ -85,8 +85,7 @@ function showBookContent(name, pic, disc) {
     element.innerHTML = bookcontentselected;
 
     element = document.querySelector('.selectedbookimage');
-    element.link = bookpicselected;
-
+    element.setAttribute("src",bookpicselected);
 }
 
 // timers
