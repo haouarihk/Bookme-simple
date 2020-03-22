@@ -13,6 +13,9 @@ function detectwhenitchanges() {
 }
 
 function search() {
+    if(!thereAreResult){
+    document.getElementById("results").innerHTML="";
+    }
     if (detectwhenitchanges()) {
         // send what has typen in the searchbar
         let data = document.getElementById("searchbar").value;
@@ -25,17 +28,18 @@ function search() {
                     searchresults.push(new Searchline(result.pic, result.name, result.link, result.disc));
                 }
             })
+            if (searchresults.length === 0) {
+                thereAreResult = false;
+            } else {
+                thereAreResult = true;
+            }
+            // show results
+            if(thereAreResult){
+            let resu = getHtmlOfthoesResults(searchresults);
+            document.getElementById("results").innerHTML = resu;
+            }
         });
-        if (searchresults.length === 0) {
-            thereAreResult = false;
-        } else {
-            thereAreResult = true;
-        }
-        // show results
-        if(thereAreResult){
-        let resu = getHtmlOfthoesResults(searchresults);
-        document.getElementById("results").innerHTML = resu;
-        }
+
     }
 
 }
@@ -61,4 +65,4 @@ function register(userdata) {
 // timers
 setInterval(() => {
     search();
-}, 500);
+}, 100);

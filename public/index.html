@@ -9,11 +9,26 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <style type="text/css">
+        h1 {
+            color: white;
+            text-shadow: 0px 3px gray;
+            letter-spacing: 3px;
+        }
+
+        .search {
+            display: flex;
+            border: 2px solid black;
+            background: white;
+            padding: 5px;
+            border-radius: 22px;
+        }
+
         .firstt {
             margin: auto auto;
             margin-top: 30%;
             width: 50%;
         }
+
         .container {
             display: flex;
         }
@@ -52,6 +67,12 @@
             width: 100%;
         }
 
+        .every2 {
+            background: url('bg2.jpg');
+            background-size: cover;
+            height: 800px;
+        }
+
         html {
             width: 100%;
             height: 100%;
@@ -64,6 +85,13 @@
             height: 100%;
             margin: 0;
             padding: 0;
+        }
+
+        .jumbotron {
+            width: 500px;
+            background: rgba(255, 255, 255, 0.69);
+            padding-top: 100px;
+            border-radius: 50px;
         }
     </style>
     <title>My Site</title>
@@ -94,15 +122,14 @@
         <div class="container">
             <div class="firstt text-center">
 
-                <h1 class="mb-5" style="color: white; text-shadow: 0px 3px gray;">Welcome To Our Library</h1>
-                <div class="search "
-                    style="display: flex; border: 2px solid black; background: white; padding: 5px; border-radius: 22px; ">
+                <h1 class="mb-5">Welcome To Our Library</h1>
+                <div class="search ">
                     <input class="searchbar " type="text" placeholder="Search for a book"
                         style="border:0px solid white; margin: 4px; " id="searchbar">
                     <a href="#" style="font-size: 14px; margin: auto 5px;"> <i class="fas fa-search fa-2x"></i></a>
 
                 </div>
-                <div id = "results" class= "row" style="width: 100%;">
+                <div id="results" style="margin:auto; width: 94%; background-color: brown;">
 
                 </div>
 
@@ -113,12 +140,11 @@
     </div>
 
     </div>
-    <div class="every2" style="    background: url('bg2.jpg'); background-size: cover; height: 800px;  ">
+    <div class="every2">
         <div class="helo" style="padding-top: 100px;">
 
-            <div class=" jumbotron"
-                style="  width: 500px; background: rgba(255, 255, 255,0.69) ; padding-top: 100px; border-radius: 50px; ;">
-                <h1 class="display-4" style="">Why Us? </h1>
+            <div class=" jumbotron">
+                <h1 class="display-4" style=" ">Why Us? </h1>
                 <p style="font-size: 1.5sem;">We have all types of books in all over the world from all the best authors
                     all over the globe.</p>
                 <p class="lead">
@@ -154,7 +180,7 @@
     <script src="obj/userdata.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="main.js"></script>
-    
+
 </body>
 
 </html>

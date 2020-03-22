@@ -6,7 +6,8 @@ class Searchline {
         this.disc = disc;
     }
     getHtml() {
-        let htm ='<a class="col-12"  href="'+this.link+'"><div style ="background:white;padding:10px"><h1 style=""> <img src="'+this.pic+'"width="42" height="42">' + this.name +"</h1></div>";
+        let htm =
+            '<a   href="' + this.link + '"><div  style ="background:white;padding:7px; text-align:left; "> <h3 > <img src="' + this.pic + '"width="42" height="42">   ' + this.name + "</h3></div>";
         return htm;
     }
 }
