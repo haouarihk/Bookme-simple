@@ -1,20 +1,24 @@
 .every1 {
     width: 100%;
-    
+
 }
-.firstpage{
+
+.firstpage {
     background: url('../img/bg.jpg');
     background-attachment: fixed;
     background-size: cover;
     padding-top: 100px;
     height: 800px;
 }
+
 .secondpage {
     background: url('../img/bg2.jpg');
     background-size: cover;
     padding-top: 100px;
     height: 760px;
+    position: relative;
 }
+
 .firstt {
     margin: auto auto;
     margin-top: 10%;
