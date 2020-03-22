@@ -29,7 +29,7 @@ function search() {
             searchresults = [];
             results.forEach((result) => {
                 if (result) {
-                    searchresults.push(new Searchline(result.pic, result.name, result.link, result.disc));
+                    searchresults.push(new Searchline(decodeURI(result.pic), result.name, result.link, decodeURI(result.disc)));
                 }
             })
             if (searchresults.length === 0) {

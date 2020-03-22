@@ -8,7 +8,7 @@ class Book {
     }
 
 }
-
+var fs = require('fs');
 // lunching the server
 const express = require('express');
 const app = express();
@@ -43,9 +43,7 @@ let booklist = [{
 
 // setting up
 let books = [];
-booklist.forEach(line => {
-    books.push(new Book(line.name, line.link, line.disc, line.pic));
-});
+takeContentOfAllBooks();
 
 // calculating how manny visitors
 let visitors = 0;
@@ -84,4 +82,26 @@ function searchwithname(input, list) {
         }
     }
     return listend;
+}
+
+function readTextFile(file) {
+    var fileContents = fs.readFileSync('./books/' + file, 'utf8');
+    fileContents = fileContents.replace(/\r/g, '');
+    fileContents = fileContents.replace(/\n/g, '<br>');
+    return fileContents;
+}
+
+function takeContentOfAllBooks() {
+    var files = fs.readdirSync('./books');
+    // loop of each file
+    files.forEach(filename => {
+        let filename2 = filename.substring(0, filename.length - 4);
+        let content = readTextFile(filename);
+        let splited = content.split("<!!endelement>");
+        // 0 image
+        // 1 content
+        books.push(new Book(filename2,"#",encodeURI(splited[1]),encodeURI(splited[0])));
+        console.log(books)
+    });
+
 }

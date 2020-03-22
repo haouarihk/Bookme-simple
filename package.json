@@ -4,7 +4,7 @@
   "description": "simple book store",
   "main": "server/server.js",
   "scripts": {
-    "start":"node server/server.js"
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,9 @@
   "homepage": "https://github.com/wolfpat01/Bookme-simple#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "socket.io": "^2.3.0",
-    "sockets": "^0.4.2"
+    "sockets": "^0.4.2",
+    "xmlhttprequest": "^1.8.0"
   }
 }
