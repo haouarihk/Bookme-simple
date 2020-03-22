@@ -1,0 +1,57 @@
+.every1 {
+    width: 100%;
+    
+}
+.firstpage{
+    background: url('../img/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 100px;
+    height: 800px;
+}
+.secondpage {
+    background: url('../img/bg2.jpg');
+    background-size: cover;
+    padding-top: 100px;
+    height: 760px;
+}
+.firstt {
+    margin: auto auto;
+    margin-top: 10%;
+    width: 50%;
+}
+
+.search {
+    display: flex;
+    border: 2px solid black;
+    background: white;
+    padding: 5px;
+    border-radius: 22px;
+}
+
+.searchIcon {
+    font-size: 14px;
+    margin: auto 5px;
+}
+
+.results {
+    margin: auto;
+    width: 94%;
+    background-color: brown;
+}
+
+
+
+.searchbar {
+    width: 100%;
+    border: 0px solid white;
+    margin: 4px;
+}
+
+.font-1_5 {
+    font-size: 1.5sem;
+}
+
+.secondrow {
+    margin-top: 265px;
+}
