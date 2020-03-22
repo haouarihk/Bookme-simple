@@ -10,6 +10,7 @@ h1 {
 
 .container {
     display: flex;
+    padding: 50px;
 }
 
 .jumbotron {

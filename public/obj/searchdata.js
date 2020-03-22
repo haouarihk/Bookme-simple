@@ -6,8 +6,11 @@ class Searchline {
         this.disc = disc;
     }
     getHtml() {
+        const name = "'"+this.name+"'";
+        const disc = "'"+this.disc+"'";
+        const pic = "'"+this.pic+"'";
         let htm =
-            '<a   href="' + this.link + '"><div  style ="background:white;padding:7px; text-align:left; "> <h3 > <img src="' + this.pic + '"width="42" height="42">   ' + this.name + "</h3></div>";
+            '<a  onClick="showBookContent('+name+','+pic+','+disc+')"><div  class ="searchElement"> <h3 > <img src="' + this.pic + '"width="42" height="42">   ' + this.name + "</h3></div>";
         return htm;
     }
 }

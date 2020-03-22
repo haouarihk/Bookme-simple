@@ -3,6 +3,10 @@ let searchresults = [];
 let savedtext = "";
 let thereAreResult = false;
 socket = io();
+// after selecting the book
+let booknameselected = "";
+let bookpicselected = "";
+let bookcontentselected = "";
 
 function detectwhenitchanges() {
     if (savedtext !== document.getElementById("searchbar").value) {
@@ -13,8 +17,8 @@ function detectwhenitchanges() {
 }
 
 function search() {
-    if(!thereAreResult){
-    document.getElementById("results").innerHTML="";
+    if (!thereAreResult) {
+        document.getElementById("results").innerHTML = "";
     }
     if (detectwhenitchanges()) {
         // send what has typen in the searchbar
@@ -34,9 +38,9 @@ function search() {
                 thereAreResult = true;
             }
             // show results
-            if(thereAreResult){
-            let resu = getHtmlOfthoesResults(searchresults);
-            document.getElementById("results").innerHTML = resu;
+            if (thereAreResult) {
+                let resu = getHtmlOfthoesResults(searchresults);
+                document.getElementById("results").innerHTML = resu;
             }
         });
 
@@ -61,6 +65,29 @@ function register(userdata) {
 
 }
 
+function hideBookContent() {
+
+    element = document.querySelector('.bookcontent');
+    element.style.visibility = 'hidden';
+}
+
+function showBookContent(name, pic, disc) {
+    booknameselected = name;
+    bookpicselected = pic;
+    bookcontentselected = disc;
+    element = document.querySelector('.bookcontent');
+    element.style.visibility = 'visible';
+
+    element = document.querySelector('.selectedbookname');
+    element.innerHTML = booknameselected;
+
+    element = document.querySelector('.selectedbookdisc');
+    element.innerHTML = bookcontentselected;
+
+    element = document.querySelector('.selectedbookimage');
+    element.link = bookpicselected;
+
+}
 
 // timers
 setInterval(() => {
