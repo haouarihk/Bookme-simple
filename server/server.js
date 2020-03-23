@@ -95,7 +95,6 @@ function takeContentOfAllBooks() {
         // 0 image
         // 1 content
         books.push(new Book(filename2, "#", splited[1], splited[0]));
-        console.log(books)
     });
 
 }
