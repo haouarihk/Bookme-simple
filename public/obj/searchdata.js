@@ -33,7 +33,7 @@ class Book {
         const name = "'"+this.name+"'";
         const disc = "'"+this.disc+"'";
         const pic = "'"+this.pic+"'";
-        let htm ='<div class="card col-md-3 col-11 mr-md-4 mb-4 "><img class="card-img-top display-none display-md-inline"  src='+pic+' alt="Card image cap"><div class="card-body"><h5 class="card-title">'+this.name+'</h5><p class="card-text">'+(this.disc.substring(0,40)+'...')+'</p><a onClick="showBookContent('+name+','+pic+','+disc+')" class="btn btn-primary"style= "color:white;">Show details</a></div></div>'
+        let htm ='<div class="card col-md-3 col-11 mr-md-4 mb-4 mw-100 row d-flex justify-content-center"><img class="card-img-top display-none display-md-inline"  src='+pic+' alt="Card image cap"><div class="card-body"><h5 class="card-title">'+this.name+'</h5><p class="card-text">'+(this.disc.substring(0,40)+'...')+'</p><a onClick="showBookContent('+name+','+pic+','+disc+')" class="btn btn-primary"style= "color:white;">Show details</a></div></div>'
         return htm;
     }
 }
