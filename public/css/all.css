@@ -12,10 +12,10 @@
 }
 
 .secondpage {
-    background: url('../img/bg2.jpg');
+    background: black;
     background-size: cover;
     padding-top: 100px;
-    height: 760px;
+    height: 1900px;
     position: relative;
 }
 

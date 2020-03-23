@@ -1,3 +1,4 @@
+
 let socket;
 let searchresults = [];
 let savedtext = "";
@@ -85,9 +86,28 @@ function showBookContent(name, pic, disc) {
     element.innerHTML = bookcontentselected;
 
     element = document.querySelector('.selectedbookimage');
-    element.setAttribute("src",bookpicselected);
+    element.setAttribute("src", bookpicselected);
+}
+let booksShelf = [];
+
+function askForBookShelf(i) {
+    let data;
+    data=i;
+    socket.emit("bookshelfrequest");
+    socket.on("bookshelflist", (books) => {
+        booksShelf = [];
+        books.forEach(book => {
+            booksShelf.push(new Book(book.pic, book.name, book.link, book.disc))
+        });
+        showBooksShelf()
+    });
 }
 
+function showBooksShelf() {
+    let _books = getHtmlOfthoesResults(booksShelf);
+    document.getElementById("booksShelf").innerHTML = _books;
+}
+askForBookShelf(6);
 // timers
 setInterval(() => {
     search();

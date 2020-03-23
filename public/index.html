@@ -47,12 +47,11 @@
 
             </div>
         </div>
-        <div class="secondpage">
-            <div class="jumbotron">
-                <h1 class="display-4">Why Us? </h1>
-                <p class="font-1_5">We have all types of books in all over the world from all the best authors
-                    all over the globe.
-                </p>
+        <div class="secondpage  ">
+            <div >
+                <div class="row" id="booksShelf">
+                   
+                </div>
             </div>
         </div>
     </div>
@@ -86,6 +85,15 @@
     </script>
 
     <!-- Local Scripts-->
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+                $nav.toggleClass("scrolled2", $(this).scrollTop() > 500);
+            });
+        });
+    </script>
     <script src="obj/searchdata.js"></script>
     <script src="obj/userdata.js"></script>
     <script src="/socket.io/socket.io.js"></script>
