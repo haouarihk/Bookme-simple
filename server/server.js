@@ -47,13 +47,13 @@ function connectedclient(socket) {
         let counter = askfor;
         let mail = [];
         books.forEach(book => {
-           // if(counter!==0)
+            // if(counter!==0)
             {
                 mail.push(book);
                 counter--;
             }
         });
-        socket.emit("bookshelflist",mail);
+        socket.emit("bookshelflist", mail);
     });
 }
 
@@ -92,6 +92,7 @@ function takeContentOfAllBooks() {
         let filename2 = filename.substring(0, filename.length - 4);
         let content = readTextFile(filename);
         let splited = content.split("<!!endelement>");
+        splited[0] = splited[0].replace("<br>", "");
         // 0 image
         // 1 content
         books.push(new Book(filename2, "#", splited[1], splited[0]));
